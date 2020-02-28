@@ -1,2 +1,2 @@
-# vaultk8sdeployment.yaml
+# vaultk8sdeployment
 Deployment file to deploy Hashicorp Vault locally
