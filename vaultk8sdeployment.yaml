@@ -57,4 +57,4 @@ spec:
         - name: file
           hostPath:
             path: /home/
-# docker run -v /Users/mneepe1/test2/vaulttesting/vault/config:/vault/config --cap-add=IPC_LOCK -e 'VAULT_LOCAL_CONFIG={"backend": {"file": {"path": "/vault/file"}}, "default_lease_ttl": "168h", "max_lease_ttl": "720h"}' -it vault server
+# docker run -p 8200 -d -v /Users/mneepe1/test2/vaulttesting/vault/config:/vault/config --cap-add=IPC_LOCK -e 'VAULT_LOCAL_CONFIG={"backend": {"file": {"path": "/vault/file"}}, "default_lease_ttl": "168h", "max_lease_ttl": "720h"}' -e 'VAULT_API_ADDR=http://localhost:8200' -e 'VAULT_ADDR=http://localhost:8200' -it vault server
